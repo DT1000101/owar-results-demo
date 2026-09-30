@@ -1,6 +1,6 @@
-/** Enable static snapshot mode for Vercel preview deploys. */
+/** Static demo off on main — use demo/* branches for Vercel snapshot previews. */
 window.OWAR_DEMO = {
-  enabled: true,
+  enabled: false,
   dataBase: "/demo-data",
-  label: "DEMO_LABEL_PLACEHOLDER",
+  label: "",
 };
