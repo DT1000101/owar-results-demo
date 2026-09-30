@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "5479",
+    "position": 1,
+    "name": "Joel Jones",
+    "bib": "4",
+    "time": "05:57.673",
+    "laps": []
+  },
+  {
+    "athlete_id": "5538",
+    "position": 2,
+    "name": "Geky Del Curto",
+    "bib": "61",
+    "time": "06:18.273",
+    "laps": []
+  },
+  {
+    "athlete_id": "5525",
+    "position": 3,
+    "name": "Benoit Rousseaux",
+    "bib": "48",
+    "time": "06:18.660",
+    "laps": []
+  },
+  {
+    "athlete_id": "5480",
+    "position": 4,
+    "name": "Jacob Jones",
+    "bib": "5",
+    "time": "06:42.460",
+    "laps": []
+  }
+]

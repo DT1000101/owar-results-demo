@@ -1,0 +1,26 @@
+[
+  {
+    "athlete_id": "5516",
+    "position": 1,
+    "name": "Kate Paxton",
+    "bib": "37",
+    "time": "07:51.250",
+    "laps": []
+  },
+  {
+    "athlete_id": "5509",
+    "position": 2,
+    "name": "Mollie Stuart",
+    "bib": "31",
+    "time": "08:34.553",
+    "laps": []
+  },
+  {
+    "athlete_id": "5542",
+    "position": 3,
+    "name": "Chloe Jager",
+    "bib": "77",
+    "time": "08:51.127",
+    "laps": []
+  }
+]

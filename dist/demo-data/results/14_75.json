@@ -1,0 +1,138 @@
+[
+  {
+    "athlete_id": "5519",
+    "position": 1,
+    "name": "Adrian Kruger",
+    "bib": "41",
+    "time": "04:47.920",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:19.726"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:28.194"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5485",
+    "position": 2,
+    "name": "Lars Lottrup",
+    "bib": "7",
+    "time": "04:50.847",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:20.646"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:30.200"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5530",
+    "position": 3,
+    "name": "Joselito Dendoncker",
+    "bib": "66",
+    "time": "05:17.107",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:41.273"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:35.833"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5506",
+    "position": 4,
+    "name": "Vid Gladovic",
+    "bib": "28",
+    "time": "05:34.950",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:37.530"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:57.420"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5498",
+    "position": 5,
+    "name": "Ondrej Bonbon",
+    "bib": "19",
+    "time": "05:35.450",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:47.803"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:47.647"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5477",
+    "position": 6,
+    "name": "Adam Freeman",
+    "bib": "2",
+    "time": "05:57.417",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:58.383"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:59.033"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5510",
+    "position": 7,
+    "name": "Thomas Skovgaard",
+    "bib": "32",
+    "time": "06:57.190",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "03:38.643"
+      },
+      {
+        "lap_number": 2,
+        "time": "03:18.547"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5525",
+    "position": 8,
+    "name": "Benoit Rousseaux",
+    "bib": "48",
+    "time": "07:01.277",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "03:39.203"
+      },
+      {
+        "lap_number": 2,
+        "time": "03:22.073"
+      }
+    ]
+  }
+]

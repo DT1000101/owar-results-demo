@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "5496",
+    "position": 1,
+    "name": "Henry Bisping",
+    "bib": "17",
+    "time": "05:57.903",
+    "laps": []
+  },
+  {
+    "athlete_id": "5492",
+    "position": 2,
+    "name": "Indiana Mcfarlane",
+    "bib": "13",
+    "time": "06:02.510",
+    "laps": []
+  },
+  {
+    "athlete_id": "5491",
+    "position": 3,
+    "name": "Henry Livingstone Dunn",
+    "bib": "12",
+    "time": "06:19.807",
+    "laps": []
+  },
+  {
+    "athlete_id": "5494",
+    "position": 4,
+    "name": "Zack McFarlane",
+    "bib": "14",
+    "time": "06:25.053",
+    "laps": []
+  }
+]

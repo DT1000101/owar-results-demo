@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "5493",
+    "position": 1,
+    "name": "Jay Kenward",
+    "bib": "16",
+    "time": "05:14.330",
+    "laps": []
+  },
+  {
+    "athlete_id": "5524",
+    "position": 2,
+    "name": "Daniel Turner",
+    "bib": "47",
+    "time": "05:17.357",
+    "laps": []
+  },
+  {
+    "athlete_id": "5484",
+    "position": 3,
+    "name": "Alexis Matton",
+    "bib": "69",
+    "time": "05:23.403",
+    "laps": []
+  },
+  {
+    "athlete_id": "5478",
+    "position": 4,
+    "name": "Sam O\u2019Connell",
+    "bib": "3",
+    "time": "06:28.370",
+    "laps": []
+  }
+]

@@ -1,0 +1,938 @@
+[
+  {
+    "athlete_id": "5493",
+    "position": 1,
+    "name": "Jay Kenward",
+    "bib": "16",
+    "time": "14:43.593",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:33.747"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:08.006"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:08.184"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:19.763"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:11.180"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:13.023"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:09.690"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5496",
+    "position": 2,
+    "name": "Henry Bisping",
+    "bib": "17",
+    "time": "15:34.940",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:51.020"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:25.003"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:14.574"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:12.000"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:21.150"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:09.860"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:21.333"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5479",
+    "position": 3,
+    "name": "Joel Jones",
+    "bib": "4",
+    "time": "15:43.377",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:46.157"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:14.013"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:22.400"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:18.363"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:23.050"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:09.784"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:29.610"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5478",
+    "position": 4,
+    "name": "Sam O\u2019Connell",
+    "bib": "3",
+    "time": "16:28.577",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:59.473"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:26.350"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:26.257"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:22.313"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:21.220"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:22.670"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:30.294"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5526",
+    "position": 5,
+    "name": "Eduardo Queralto",
+    "bib": "49",
+    "time": "16:54.250",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:58.380"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:26.033"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:22.947"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:24.673"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:36.047"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:29.417"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:36.753"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5520",
+    "position": 6,
+    "name": "Gerard Rincon",
+    "bib": "43",
+    "time": "16:55.190",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:05.297"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:26.420"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:26.310"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:27.530"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:28.000"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:23.973"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:37.660"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5481",
+    "position": 7,
+    "name": "Florent Audit",
+    "bib": "6",
+    "time": "17:10.703",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "01:54.877"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:27.410"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:28.616"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:26.764"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:31.936"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:32.294"
+      },
+      {
+        "lap_number": 7,
+        "time": "02:48.806"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5519",
+    "position": 8,
+    "name": "Adrian Kruger",
+    "bib": "41",
+    "time": "15:07.253",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:04.703"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:38.194"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:37.040"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:36.486"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:35.760"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:35.070"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5490",
+    "position": 9,
+    "name": "Toni S\u00fcnder",
+    "bib": "11",
+    "time": "15:19.973",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:11.200"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:40.183"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:38.760"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:38.910"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:37.424"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:33.496"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5511",
+    "position": 10,
+    "name": "Jeffrey Jaffa Gaming",
+    "bib": "34",
+    "time": "15:20.913",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:10.687"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:53.346"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:36.984"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:33.896"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:34.457"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:31.543"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5506",
+    "position": 11,
+    "name": "Vid Gladovic",
+    "bib": "28",
+    "time": "15:25.380",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:16.540"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:40.967"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:37.923"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:35.813"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:37.474"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:36.663"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5502",
+    "position": 12,
+    "name": "Jonas Pfl\u00fcger",
+    "bib": "22",
+    "time": "15:27.243",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:22.037"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:36.700"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:37.163"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:36.587"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:38.700"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:36.056"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5480",
+    "position": 13,
+    "name": "Jacob Jones",
+    "bib": "5",
+    "time": "15:41.600",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:13.473"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:52.394"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:36.470"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:33.453"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:36.587"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:49.223"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5497",
+    "position": 14,
+    "name": "Radim Kla\u0161ka",
+    "bib": "18",
+    "time": "15:42.387",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:37.960"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:55.377"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:33.936"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:34.450"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:27.464"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:33.200"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5513",
+    "position": 15,
+    "name": "Noah Gamon",
+    "bib": "35",
+    "time": "15:43.953",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:19.233"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:33.734"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:39.540"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:40.510"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:49.343"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:41.593"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5485",
+    "position": 16,
+    "name": "Lars Lottrup",
+    "bib": "7",
+    "time": "15:44.447",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:27.080"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:44.867"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:37.040"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:35.333"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:38.323"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:41.804"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5518",
+    "position": 17,
+    "name": "Clint Lashley",
+    "bib": "40",
+    "time": "16:21.830",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:40.243"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:40.067"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:45.917"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:47.280"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:43.436"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:44.887"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5499",
+    "position": 18,
+    "name": "Martin Petricek",
+    "bib": "20",
+    "time": "17:07.643",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:38.623"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:56.057"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:53.440"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:53.137"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:49.673"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:56.713"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5521",
+    "position": 19,
+    "name": "Nick Oppy",
+    "bib": "44",
+    "time": "17:12.017",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:26.343"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:48.874"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:57.986"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:56.250"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:57.240"
+      },
+      {
+        "lap_number": 6,
+        "time": "03:05.324"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5534",
+    "position": 20,
+    "name": "Lucas Hrazky",
+    "bib": "64",
+    "time": "17:13.787",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:39.843"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:56.720"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:53.030"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:52.527"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:58.137"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:53.530"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5525",
+    "position": 21,
+    "name": "Benoit Rousseaux",
+    "bib": "48",
+    "time": "17:16.347",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:30.007"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:46.950"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:59.503"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:52.103"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:53.250"
+      },
+      {
+        "lap_number": 6,
+        "time": "03:14.534"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5507",
+    "position": 22,
+    "name": "Jonas Bukrinski Andersen",
+    "bib": "29",
+    "time": "17:16.860",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:44.590"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:59.777"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:55.746"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:54.570"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:51.384"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:50.793"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5538",
+    "position": 23,
+    "name": "Geky Del Curto",
+    "bib": "61",
+    "time": "17:18.430",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "04:07.130"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:50.457"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:35.790"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:27.780"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:28.910"
+      },
+      {
+        "lap_number": 6,
+        "time": "02:48.363"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5522",
+    "position": 24,
+    "name": "Si Oppenheimer",
+    "bib": "45",
+    "time": "17:27.153",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:12.757"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:40.210"
+      },
+      {
+        "lap_number": 3,
+        "time": "03:31.910"
+      },
+      {
+        "lap_number": 4,
+        "time": "03:04.826"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:49.874"
+      },
+      {
+        "lap_number": 6,
+        "time": "03:07.576"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5498",
+    "position": 25,
+    "name": "Ondrej Bonbon",
+    "bib": "19",
+    "time": "13:43.990",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:33.030"
+      },
+      {
+        "lap_number": 2,
+        "time": "02:49.420"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:43.200"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:50.487"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:47.853"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5514",
+    "position": 26,
+    "name": "James Pitcher",
+    "bib": "36",
+    "time": "14:15.237",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:31.683"
+      },
+      {
+        "lap_number": 2,
+        "time": "03:00.760"
+      },
+      {
+        "lap_number": 3,
+        "time": "02:53.220"
+      },
+      {
+        "lap_number": 4,
+        "time": "02:52.900"
+      },
+      {
+        "lap_number": 5,
+        "time": "02:56.674"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5510",
+    "position": 27,
+    "name": "Thomas Skovgaard",
+    "bib": "32",
+    "time": "15:39.433",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:49.703"
+      },
+      {
+        "lap_number": 2,
+        "time": "03:08.807"
+      },
+      {
+        "lap_number": 3,
+        "time": "03:13.110"
+      },
+      {
+        "lap_number": 4,
+        "time": "03:14.640"
+      },
+      {
+        "lap_number": 5,
+        "time": "03:13.173"
+      }
+    ]
+  },
+  {
+    "athlete_id": "5504",
+    "position": 28,
+    "name": "Gilles De Somviele",
+    "bib": "26",
+    "time": "16:36.443",
+    "laps": [
+      {
+        "lap_number": 1,
+        "time": "02:53.513"
+      },
+      {
+        "lap_number": 2,
+        "time": "03:15.934"
+      },
+      {
+        "lap_number": 3,
+        "time": "03:21.703"
+      },
+      {
+        "lap_number": 4,
+        "time": "03:30.863"
+      },
+      {
+        "lap_number": 5,
+        "time": "03:34.430"
+      }
+    ]
+  }
+]

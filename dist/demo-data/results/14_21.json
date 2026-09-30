@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "5496",
+    "position": 1,
+    "name": "Henry Bisping",
+    "bib": "17",
+    "time": "05:52.083",
+    "laps": []
+  },
+  {
+    "athlete_id": "5494",
+    "position": 2,
+    "name": "Zack McFarlane",
+    "bib": "14",
+    "time": "06:43.450",
+    "laps": []
+  },
+  {
+    "athlete_id": "5510",
+    "position": 3,
+    "name": "Thomas Skovgaard",
+    "bib": "32",
+    "time": "07:08.303",
+    "laps": []
+  },
+  {
+    "athlete_id": "5495",
+    "position": 4,
+    "name": "Max Mcfarlane",
+    "bib": "15",
+    "time": "08:03.773",
+    "laps": []
+  }
+]

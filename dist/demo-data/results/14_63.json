@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "5479",
+    "position": 1,
+    "name": "Joel Jones",
+    "bib": "4",
+    "time": "06:02.263",
+    "laps": []
+  },
+  {
+    "athlete_id": "5517",
+    "position": 2,
+    "name": "James Grant",
+    "bib": "39",
+    "time": "07:13.240",
+    "laps": []
+  },
+  {
+    "athlete_id": "5526",
+    "position": 3,
+    "name": "Eduardo Queralto",
+    "bib": "49",
+    "time": "07:34.820",
+    "laps": []
+  },
+  {
+    "athlete_id": "5503",
+    "position": 4,
+    "name": "Fabian Scherrer",
+    "bib": "25",
+    "time": "07:48.763",
+    "laps": []
+  }
+]
