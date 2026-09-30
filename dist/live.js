@@ -1,3 +1,109 @@
-const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));let selected=null,selectedLevel=null,lastUpdateAt=Date.now(),lastSourceStamp=null,staleTimer=null;function renderUpdateAge(){const el=$('#updated-status');if(!el)return;const seconds=Math.max(0,Math.floor((Date.now()-lastUpdateAt)/1000));const hours=Math.floor(seconds/3600),minutes=Math.floor(seconds%3600/60),secs=seconds%60;const age=seconds>=18000?'Long ago':hours?hours+':'+String(minutes).padStart(2,'0')+':'+String(secs).padStart(2,'0'):minutes?minutes+':'+String(secs).padStart(2,'0'):secs+' sec';const at=new Date(lastUpdateAt);const clock=String(at.getHours()).padStart(2,'0')+':'+String(at.getMinutes()).padStart(2,'0');el.textContent='Updated '+clock+' · '+(age==='Long ago'?age:age+' ago')}function scheduleStaleLabel(){clearTimeout(staleTimer);const delay=Math.max(0,18000000-(Date.now()-lastUpdateAt));staleTimer=setTimeout(renderUpdateAge,delay+50)};const tournamentRank=t=>{const n=String(t).toLowerCase();const order=['open','women','groms','infinity race','surf & dirt','legends','chair race','2 hour relay race'];const i=order.indexOf(n);return i<0?100:i};const navigationStage=e=>{const n=[e.stage,e.name,e.level].filter(Boolean).join(' ').toLowerCase();if(n.includes('qual'))return 'Qualifiers';if(n.includes('heat'))return 'Heats';if(n.includes('quarter'))return 'Quarters';if(n.includes('semi'))return 'Semi';if(n.includes('final'))return 'Finals';return 'Qualifiers'};const levelRank=level=>['Qualifiers','Heats','Quarters','Semi','Finals'].indexOf(level);async function get(u){const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error();return r.json()}function table(e,r){const timeLabel=e.multi_lap?'Fastest lap':'Time';return `<article class="race-table"><header><div><span>${esc(e.multi_lap?'Fastest lap':'Results')}</span><h3>${esc(e.name)}</h3></div><b>${r.length} riders</b></header><div class="table-scroll"><table><colgroup><col class="result-pos"><col class="result-rider"><col class="result-time"></colgroup><thead><tr><th>Pos</th><th>Rider</th><th>${timeLabel}</th></tr></thead><tbody>${r.map((x,i)=>`<tr class="${i<Number(e.highlight_count??2)?'podium':''}"><td class="place">${x.position}</td><td><a class="rider rider-link" href="/rider/?id=${encodeURIComponent(x.athlete_id)}"><span class="bib">${esc(x.bib)}</span><span class="name">${esc(x.name)}</span></a></td><td class="time">${esc(x.time)}</td></tr>`).join('')}</tbody></table></div></article>`}async function render(){try{const f=await get('/api/public/events');const received=Date.parse(f.updatedAt||'');if(Number.isFinite(received)&&f.updatedAt!==lastSourceStamp){lastSourceStamp=f.updatedAt;lastUpdateAt=received;renderUpdateAge();scheduleStaleLabel()}else if(lastSourceStamp===null){renderUpdateAge();scheduleStaleLabel()}const ts=[...new Set(f.events.map(e=>e.tournament||'Tournament'))].sort((a,b)=>tournamentRank(a)-tournamentRank(b)||a.localeCompare(b));if(!selected||!ts.includes(selected))selected=ts[0];$('#event-tabs').innerHTML=ts.map(t=>`<button class="tab ${t===selected?'active':''}" data-t="${esc(t)}">${esc(t)}</button>`).join('');$('#event-tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=b.dataset.t;selectedLevel=null;render()});const es=f.events.filter(e=>(e.tournament||'Tournament')===selected);if(!es.length){$('#race-title').textContent='No published results';return}const data=await Promise.all(es.map(e=>get('/api/public/events/'+encodeURIComponent(e.id)+'/results'))),levels=[...new Set(es.map(navigationStage))].sort((a,b)=>levelRank(a)-levelRank(b));if(!selectedLevel||!levels.includes(selectedLevel))selectedLevel=levels[0];$('#race-title').textContent=selected;$('#result-count').textContent=`${es.length} ${es.length===1?'race':'races'}`;$('#round-nav').innerHTML=levels.map((level,i)=>`<button class="round ${level===selectedLevel?'active':''}" data-level="${esc(level)}"><span class="round-name">${esc(level)}</span><span class="round-step">${i+1}</span></button>`).join('');$('#round-nav').querySelectorAll('button').forEach(b=>b.onclick=()=>{selectedLevel=b.dataset.level;render()});const set=es.map((e,i)=>({e,r:data[i]})).filter(x=>navigationStage(x.e)===selectedLevel);$('#stage-results').innerHTML=`<div class="race-grid ${set.length===1?'single':''}">${set.map(x=>table(x.e,x.r)).join('')}</div><p class="stage-note">Select any rider to see every recorded time and the race it came from.</p>`}catch{$('#race-title').textContent='Waiting for timing feed';$('#result-count').textContent='The live results service is not connected yet.'}}render();setInterval(render,15000);
+const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+let selected=null,selectedLevel=null,lastUpdateAt=Date.now(),lastSourceStamp=null,staleTimer=null,seedsReady=false;
 
+function renderUpdateAge(){
+  const el=$('#updated-status');if(!el)return;
+  const seconds=Math.max(0,Math.floor((Date.now()-lastUpdateAt)/1000));
+  const hours=Math.floor(seconds/3600),minutes=Math.floor(seconds%3600/60),secs=seconds%60;
+  const age=seconds>=18000000?'Long ago':hours?hours+':'+String(minutes).padStart(2,'0')+':'+String(secs).padStart(2,'0'):minutes?minutes+':'+String(secs).padStart(2,'0'):secs+' sec';
+  const at=new Date(lastUpdateAt);
+  const clock=String(at.getHours()).padStart(2,'0')+':'+String(at.getMinutes()).padStart(2,'0');
+  el.textContent='Updated '+clock+' · '+(age==='Long ago'?age:age+' ago');
+}
+function scheduleStaleLabel(){
+  clearTimeout(staleTimer);
+  const delay=Math.max(0,18000000-(Date.now()-lastUpdateAt));
+  staleTimer=setTimeout(renderUpdateAge,delay+50);
+}
 
+const tournamentRank=t=>{
+  const n=String(t).toLowerCase();
+  const order=['open','open men','women','groms','wild men','wild women','infinity race','surf & dirt','surf and durt','specials','legends','chair race','2 hour relay race'];
+  const i=order.indexOf(n);
+  return i<0?100:i;
+};
+const levelRank=level=>['Qualifiers','Heats','Quarters','Semi','Finals'].indexOf(level);
+
+async function get(u){
+  const r=await fetch(u,{cache:'no-store'});
+  if(!r.ok)throw Error();
+  return r.json();
+}
+
+function table(e,r,{pending=false,projectedRows=null}={}){
+  const rows=pending&&projectedRows?projectedRows:r;
+  const timeLabel=pending?'Status':(e.multi_lap?'Fastest lap':'Time');
+  const badge=pending?'Up next':'Results';
+  const countLabel=pending
+    ? `${rows.filter(x=>x.known).length}/${rows.length||4} locked in`
+    : `${rows.length} riders`;
+  const body=rows.length
+    ? rows.map((x)=>{
+        const pendingRow=pending||x.pending;
+        const finish=x.finishPos??x.position;
+        const finishLabel=pendingRow||finish==null||finish===''?'NA':finish;
+        const cls=[
+          !pendingRow&&Number(finish)>0&&Number(finish)<=Number(e.highlight_count??2)?'podium':'',
+          pendingRow?'pending-row':'',
+          x.known?'pending-known':(pendingRow?'pending-unknown':''),
+        ].filter(Boolean).join(' ');
+        const riderInner=x.athlete_id
+          ? `<a class="rider rider-link" href="/rider/?id=${encodeURIComponent(x.athlete_id)}"><span class="bib">${esc(x.bib)}</span><span class="name">${esc(x.name)}</span></a>`
+          : `<span class="rider"><span class="bib">${esc(x.bib||'—')}</span><span class="name">${esc(x.name)}</span></span>`;
+        return `<tr class="${cls}">
+          <td class="place">${esc(finishLabel)}</td>
+          <td class="start">${x.startPos??'—'}</td>
+          <td class="seed">${x.seed??'—'}</td>
+          <td>${riderInner}</td>
+          <td class="time">${esc(pendingRow?(x.time||'Not raced yet'):x.time)}</td>
+        </tr>`;
+      }).join('')
+    : `<tr class="pending-row"><td class="place">NA</td><td class="start">—</td><td class="seed">—</td><td><span class="rider"><span class="bib">—</span><span class="name">Waiting for earlier results</span></span></td><td class="time">Not raced yet</td></tr>`;
+  return `<article class="race-table ${pending?'race-table--pending':''}"><header><div><span>${esc(badge)}</span><h3>${esc(e.name)}</h3></div><b>${esc(countLabel)}</b></header><div class="table-scroll"><table><colgroup><col class="result-pos"><col class="result-start"><col class="result-seed"><col class="result-rider"><col class="result-time"></colgroup><thead><tr><th>Finish position</th><th>Starting grid position</th><th>Seed</th><th>Rider</th><th>${esc(timeLabel)}</th></tr></thead><tbody>${body}</tbody></table></div></article>`;
+}
+
+function renderCard(item){
+  if(item.pending) return table(item.e,item.r,{pending:true,projectedRows:item.projectedRows||[]});
+  return table(item.e,item.r);
+}
+
+async function render(){
+  try{
+    if(!seedsReady&&window.BracketProjection?.loadSeeds){
+      try{await BracketProjection.loadSeeds('/data/owa-2025-seeds.json');seedsReady=true;}catch(_){seedsReady=true;}
+    }
+    const f=await get('/api/public/events');
+    const received=Date.parse(f.updatedAt||'');
+    if(Number.isFinite(received)&&f.updatedAt!==lastSourceStamp){
+      lastSourceStamp=f.updatedAt;lastUpdateAt=received;renderUpdateAge();scheduleStaleLabel();
+    }else if(lastSourceStamp===null){
+      renderUpdateAge();scheduleStaleLabel();
+    }
+    const ts=[...new Set(f.events.map(e=>e.tournament||'Tournament'))].sort((a,b)=>tournamentRank(a)-tournamentRank(b)||a.localeCompare(b));
+    if(!selected||!ts.includes(selected))selected=ts[0];
+    $('#event-tabs').innerHTML=ts.map(t=>`<button class="tab ${t===selected?'active':''}" data-t="${esc(t)}">${esc(t)}</button>`).join('');
+    $('#event-tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=b.dataset.t;selectedLevel=null;render()});
+    const es=f.events.filter(e=>(e.tournament||'Tournament')===selected);
+    if(!es.length){$('#race-title').textContent='No published results';$('#result-count').textContent='';$('#round-nav').innerHTML='';$('#stage-results').innerHTML='';return}
+    const data=await Promise.all(es.map(e=>get('/api/public/events/'+encodeURIComponent(e.id)+'/results')));
+    const raw=es.map((e,i)=>({e,r:data[i]}));
+    const enriched=window.BracketProjection
+      ? BracketProjection.enrichTournament(raw)
+      : {bracket:raw.map(x=>({...x,pending:false})),extras:[]};
+    const all=[...enriched.bracket,...enriched.extras];
+    const levels=[...new Set(all.map(item=>BracketProjection?BracketProjection.stageOfItem(item):'Qualifiers'))].sort((a,b)=>levelRank(a)-levelRank(b));
+    if(!selectedLevel||!levels.includes(selectedLevel))selectedLevel=levels[0];
+    const pendingCount=all.filter(x=>x.pending).length;
+    $('#race-title').textContent=selected;
+    $('#result-count').textContent=`${es.length} published${pendingCount?` · ${pendingCount} up next`:''}`;
+    $('#round-nav').innerHTML=levels.map((level,i)=>`<button class="round ${level===selectedLevel?'active':''}" data-level="${esc(level)}"><span class="round-name">${esc(level)}</span><span class="round-step">${i+1}</span></button>`).join('');
+    $('#round-nav').querySelectorAll('button').forEach(b=>b.onclick=()=>{selectedLevel=b.dataset.level;render()});
+    const set=all.filter(x=>(BracketProjection?BracketProjection.stageOfItem(x):'Qualifiers')===selectedLevel);
+    $('#stage-results').innerHTML=`<div class="race-grid ${set.length===1?'single':''}">${set.map(renderCard).join('')}</div><p class="stage-note">Rows are start order. Heats: better seed → earlier gate. Later rounds: both race winners take starts 1–2 (by seed time), both 2nds take 3–4. <a href="/seeding/">Open seeding board</a></p>`;
+  }catch{
+    $('#race-title').textContent='Waiting for timing feed';
+    $('#result-count').textContent='The live results service is not connected yet.';
+  }
+}
+render();
+setInterval(render,15000);

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "owar-results-demo",
+  "buildCommand": null,
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/seeding", "destination": "/seeding/index.html" },
+    { "source": "/rider", "destination": "/rider/index.html" },
+    { "source": "/admin", "destination": "/admin/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/demo-data/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=60" }]
+    }
+  ]
+}
