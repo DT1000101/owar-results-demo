@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "7554",
+    "position": 1,
+    "name": "Jacob Jones",
+    "bib": "5",
+    "time": "06:24.387",
+    "laps": []
+  },
+  {
+    "athlete_id": "7555",
+    "position": 2,
+    "name": "Florent Audit",
+    "bib": "6",
+    "time": "06:41.047",
+    "laps": []
+  },
+  {
+    "athlete_id": "7591",
+    "position": 3,
+    "name": "Clint Lashley",
+    "bib": "40",
+    "time": "06:56.280",
+    "laps": []
+  },
+  {
+    "athlete_id": "7550",
+    "position": 4,
+    "name": "F\u00e1bio Costa",
+    "bib": "1",
+    "time": "07:45.987",
+    "laps": []
+  }
+]

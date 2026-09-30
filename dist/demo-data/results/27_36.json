@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "7604",
+    "position": 1,
+    "name": "Barbara Tokarska",
+    "bib": "97",
+    "time": "07:30.747",
+    "laps": []
+  },
+  {
+    "athlete_id": "7609",
+    "position": 2,
+    "name": "Leyla Zi",
+    "bib": "100",
+    "time": "07:45.403",
+    "laps": []
+  },
+  {
+    "athlete_id": "7612",
+    "position": 3,
+    "name": "Quinine Posno",
+    "bib": "55",
+    "time": "07:54.043",
+    "laps": []
+  },
+  {
+    "athlete_id": "7589",
+    "position": 4,
+    "name": "Kate Paxton",
+    "bib": "37",
+    "time": "07:57.943",
+    "laps": []
+  }
+]

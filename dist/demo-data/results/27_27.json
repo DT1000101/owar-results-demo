@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "7558",
+    "position": 1,
+    "name": "Alexis Matton",
+    "bib": "69",
+    "time": "05:44.447",
+    "laps": []
+  },
+  {
+    "athlete_id": "7610",
+    "position": 2,
+    "name": "Geky Del Curto",
+    "bib": "61",
+    "time": "06:20.063",
+    "laps": []
+  },
+  {
+    "athlete_id": "7555",
+    "position": 3,
+    "name": "Florent Audit",
+    "bib": "6",
+    "time": "06:20.203",
+    "laps": []
+  },
+  {
+    "athlete_id": "7575",
+    "position": 4,
+    "name": "Jonas Pfl\u00fcger",
+    "bib": "22",
+    "time": "06:23.063",
+    "laps": []
+  }
+]

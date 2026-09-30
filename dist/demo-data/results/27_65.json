@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "7610",
+    "position": 1,
+    "name": "Geky Del Curto",
+    "bib": "61",
+    "time": "06:24.760",
+    "laps": []
+  },
+  {
+    "athlete_id": "7581",
+    "position": 2,
+    "name": "Nico Stuart",
+    "bib": "30",
+    "time": "06:28.850",
+    "laps": []
+  },
+  {
+    "athlete_id": "7560",
+    "position": 3,
+    "name": "Thorkild Rasmussen",
+    "bib": "8",
+    "time": "06:49.130",
+    "laps": []
+  },
+  {
+    "athlete_id": "7570",
+    "position": 4,
+    "name": "Radim Kla\u0161ka",
+    "bib": "18",
+    "time": "07:06.260",
+    "laps": []
+  }
+]

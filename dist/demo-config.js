@@ -2,5 +2,5 @@
 window.OWAR_DEMO = {
   enabled: true,
   dataBase: "/demo-data",
-  label: "DEMO_LABEL_PLACEHOLDER",
+  label: "DEMO · PARTIAL RaceTec snapshot — some heats unfinished (validation)",
 };

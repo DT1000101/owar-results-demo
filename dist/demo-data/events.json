@@ -1,0 +1,276 @@
+{
+  "status": "Live",
+  "updatedAt": "2026-09-30T19:16:07.122906+00:00",
+  "events": [
+    {
+      "id": "27:21",
+      "name": "Groms Semi 1",
+      "tournament": "Groms",
+      "level": "Bracket",
+      "stage": "Groms Semi 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:22",
+      "name": "Groms Semi 2",
+      "tournament": "Groms",
+      "level": "Bracket",
+      "stage": "Groms Semi 2",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    },
+    {
+      "id": "27:23",
+      "name": "Groms Final",
+      "tournament": "Groms",
+      "level": "Bracket",
+      "stage": "Groms Final",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:73",
+      "name": "Grom's RunnerUps",
+      "tournament": "Groms",
+      "level": "Bracket",
+      "stage": "Grom's RunnerUps",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:27",
+      "name": "Mens Quarter 1",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Quarter 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:28",
+      "name": "Mens Quarter 2",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Quarter 2",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:29",
+      "name": "Mens Quarter 3",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Quarter 3",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:30",
+      "name": "Mens Quarter 4",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Quarter 4",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 1
+    },
+    {
+      "id": "27:31",
+      "name": "Mens Semi 1",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Semi 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:58",
+      "name": "Mens Heats 1",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 1
+    },
+    {
+      "id": "27:59",
+      "name": "Mens Heats 2",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 2",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:60",
+      "name": "Mens Heats 3",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 3",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    },
+    {
+      "id": "27:61",
+      "name": "Mens Heats 4",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 4",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:62",
+      "name": "Mens Heats 5",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 5",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:63",
+      "name": "Mens Heats 6",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 6",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:64",
+      "name": "Mens Heats 7",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 7",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    },
+    {
+      "id": "27:65",
+      "name": "Mens Heats 8",
+      "tournament": "Open Men",
+      "level": "Bracket",
+      "stage": "Mens Heats 8",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:43",
+      "name": "Surf and Durt",
+      "tournament": "Specials",
+      "level": "Bracket",
+      "stage": "Surf and Durt",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 28
+    },
+    {
+      "id": "27:74",
+      "name": "Legends Race",
+      "tournament": "Specials",
+      "level": "Bracket",
+      "stage": "Legends Race",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    },
+    {
+      "id": "27:75",
+      "name": "Chair Race",
+      "tournament": "Specials",
+      "level": "Bracket",
+      "stage": "Chair Race",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 8
+    },
+    {
+      "id": "27:48",
+      "name": "Wild - Mens Semi 1",
+      "tournament": "Wild Men",
+      "level": "Bracket",
+      "stage": "Wild - Mens Semi 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 5
+    },
+    {
+      "id": "27:49",
+      "name": "Wild - Mens Semi 2",
+      "tournament": "Wild Men",
+      "level": "Bracket",
+      "stage": "Wild - Mens Semi 2",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:50",
+      "name": "Wild - Mens Final",
+      "tournament": "Wild Men",
+      "level": "Bracket",
+      "stage": "Wild - Mens Final",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    },
+    {
+      "id": "27:24",
+      "name": "Womens Semi 1",
+      "tournament": "Women",
+      "level": "Bracket",
+      "stage": "Womens Semi 1",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:26",
+      "name": "Womens Final",
+      "tournament": "Women",
+      "level": "Bracket",
+      "stage": "Womens Final",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:36",
+      "name": "Womens Semi 2",
+      "tournament": "Women",
+      "level": "Bracket",
+      "stage": "Womens Semi 2",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 4
+    },
+    {
+      "id": "27:71",
+      "name": "Women's RunnerUps",
+      "tournament": "Women",
+      "level": "Bracket",
+      "stage": "Women's RunnerUps",
+      "highlight_count": 2,
+      "multi_lap": 0,
+      "count": 3
+    }
+  ]
+}

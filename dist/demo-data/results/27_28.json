@@ -1,0 +1,34 @@
+[
+  {
+    "athlete_id": "7597",
+    "position": 1,
+    "name": "Daniel Turner",
+    "bib": "47",
+    "time": "05:35.520",
+    "laps": []
+  },
+  {
+    "athlete_id": "7598",
+    "position": 2,
+    "name": "Benoit Rousseaux",
+    "bib": "48",
+    "time": "06:54.447",
+    "laps": []
+  },
+  {
+    "athlete_id": "7590",
+    "position": 3,
+    "name": "James Grant",
+    "bib": "39",
+    "time": "07:12.183",
+    "laps": []
+  },
+  {
+    "athlete_id": "7579",
+    "position": 4,
+    "name": "Vid Gladovic",
+    "bib": "28",
+    "time": "07:17.997",
+    "laps": []
+  }
+]

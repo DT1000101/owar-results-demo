@@ -1,0 +1,26 @@
+[
+  {
+    "athlete_id": "7566",
+    "position": 1,
+    "name": "Jay Kenward",
+    "bib": "16",
+    "time": "05:28.430",
+    "laps": []
+  },
+  {
+    "athlete_id": "7598",
+    "position": 2,
+    "name": "Benoit Rousseaux",
+    "bib": "48",
+    "time": "06:56.330",
+    "laps": []
+  },
+  {
+    "athlete_id": "7592",
+    "position": 3,
+    "name": "Adrian Kruger",
+    "bib": "41",
+    "time": "07:00.170",
+    "laps": []
+  }
+]
