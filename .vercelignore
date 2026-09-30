@@ -1,0 +1,10 @@
+Dockerfile
+docker-compose.yml
+server/
+scripts/
+.env
+.env.local
+*.sqlite
+.venv/
+__pycache__/
+.openai/
