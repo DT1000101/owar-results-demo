@@ -198,6 +198,48 @@
     );
   }
 
+  function hasRecordedResult(row) {
+    if (!row) return false;
+    if (Number(row.position) > 0) return true;
+    const t = String(row.time || "").trim();
+    return Boolean(t) && t.toLowerCase() !== "not raced yet";
+  }
+
+  function recordedFinishers(rows) {
+    return sortFinishers(rows).filter(hasRecordedResult);
+  }
+
+  /** First-round gate list from TT seed zigzag when nobody has raced yet. */
+  function seedStartRows(family, stage, num) {
+    const cat = FAMILY_SEED_CAT[family];
+    if (!cat || !seedCatalog) return null;
+    const board = buildCategoryHeatGrids(cat);
+    const want =
+      stage === "heat"
+        ? "Heat"
+        : stage === "quarter"
+          ? "Quarter"
+          : stage === "semi"
+            ? "Semi"
+            : null;
+    if (!want || !board.heats.length) return null;
+    const prefix = board.heats[0].title.replace(/\s+\d+$/, "");
+    if (prefix !== want) return null;
+    const heat = board.heats[num - 1];
+    if (!heat) return null;
+    return heat.slots
+      .filter((s) => s.known)
+      .map((s) => ({
+        position: null,
+        athlete_id: "",
+        name: s.name,
+        bib: "—",
+        time: "Not raced yet",
+        pending: true,
+        known: true,
+      }));
+  }
+
   function lookupSeed(name, family) {
     const key = normName(name);
     if (!key) return null;
@@ -340,7 +382,7 @@
       for (const node of expectedNodes(family, seenStages)) {
         const key = `${family}:${node.stage}:${node.num}`;
         const existing = byKey.get(key);
-        const finishers = sortFinishers(existing?.r);
+        const finishers = recordedFinishers(existing?.r);
         const raced = finishers.length > 0;
 
         if (raced && existing) {
@@ -357,7 +399,7 @@
         const slots = feedSlots(node.stage, node.num);
         const rowsRaw = slots.map((slot) => {
           const srcKey = `${family}:${slot.from.stage}:${slot.from.num}`;
-          const src = sortFinishers(byKey.get(srcKey)?.r);
+          const src = recordedFinishers(byKey.get(srcKey)?.r);
           const rider = src[ROLE[slot.role]];
           const placeholder = roleLabel(slot.from.stage, slot.from.num, slot.role);
           return {
@@ -375,31 +417,66 @@
         });
 
         if (node.stage === "heat") {
-          if (existing) {
-            const empty = decorateRows(
-              (existing.r || []).map((r) => ({ ...r, pending: true, known: true, time: "Not raced yet" })),
-              family,
-              node.stage,
-              node.num,
-              byKey,
-              true,
-            );
-            projected.push({
-              e: existing.e,
-              r: [],
+          const seeded = seedStartRows(family, node.stage, node.num);
+          const baseRows =
+            seeded ||
+            (existing?.r || []).map((r) => ({
+              ...r,
               pending: true,
-              projectedRows: empty,
-              parsed: { ...node, family, key },
-            });
-          }
+              known: true,
+              time: "Not raced yet",
+            }));
+          if (!existing && !seeded) continue;
+          const empty = decorateRows(baseRows, family, node.stage, node.num, byKey, true);
+          projected.push({
+            e:
+              existing?.e || {
+                id: `projected:${key}`,
+                name: displayName(family, node.stage, node.num),
+                stage: displayName(family, node.stage, node.num),
+                tournament: items.find((x) => familyFromName(x.e.tournament || x.e.name) === family)?.e
+                  ?.tournament || "",
+                level: items[0]?.e?.level || "",
+                highlight_count: 2,
+                multi_lap: 0,
+                count: 0,
+              },
+            r: [],
+            pending: true,
+            projectedRows: empty,
+            parsed: { ...node, family, key },
+          });
           continue;
         }
 
         const anySource = slots.some((slot) => {
           const srcKey = `${family}:${slot.from.stage}:${slot.from.num}`;
-          return sortFinishers(byKey.get(srcKey)?.r).length > 0;
+          return recordedFinishers(byKey.get(srcKey)?.r).length > 0;
         });
-        if (!anySource && !existing) continue;
+        const seededFirst = !anySource ? seedStartRows(family, node.stage, node.num) : null;
+        if (!anySource && !existing && !seededFirst) continue;
+        if (seededFirst) {
+          const e =
+            existing?.e || {
+              id: `projected:${key}`,
+              name: displayName(family, node.stage, node.num),
+              stage: displayName(family, node.stage, node.num),
+              tournament: items.find((x) => familyFromName(x.e.tournament || x.e.name) === family)?.e
+                ?.tournament || "",
+              level: items[0]?.e?.level || "",
+              highlight_count: 2,
+              multi_lap: 0,
+              count: 0,
+            };
+          projected.push({
+            e,
+            r: [],
+            pending: true,
+            projectedRows: decorateRows(seededFirst, family, node.stage, node.num, byKey, true),
+            parsed: { ...node, family, key },
+          });
+          continue;
+        }
 
         const e =
           existing?.e || {

@@ -2,5 +2,5 @@
 window.OWAR_DEMO = {
   enabled: true,
   dataBase: "/demo-data",
-  label: "DEMO · FULL RaceTec snapshot — complete weekend board (validation)",
+  label: "DEMO · EMPTY pre-start — all names, no times yet (validation)",
 };

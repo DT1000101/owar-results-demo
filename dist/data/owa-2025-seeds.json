@@ -1,61 +1,61 @@
 {
   "event": "Onewheel Algarve 2025",
-  "source": "TT / divisions owa-2025",
+  "source": "TT ranks (times withheld \u2014 pre-start demo)",
   "categories": {
     "Groms": [
       {
         "name": "Henry Bisping",
-        "timeSec": 352.083,
-        "time": "05:52.083",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 1
       },
       {
         "name": "Indiana Mcfarlane",
-        "timeSec": 362.51,
-        "time": "06:02.510",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 2
       },
       {
         "name": "Henry Livingstone Dunn",
-        "timeSec": 379.807,
-        "time": "06:19.807",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 3
       },
       {
         "name": "Zack McFarlane",
-        "timeSec": 385.053,
-        "time": "06:25.053",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 4
       },
       {
         "name": "Noah Gamon",
-        "timeSec": 391.967,
-        "time": "06:31.967",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 5
       },
       {
         "name": "Thomas Skovgaard",
-        "timeSec": 428.303,
-        "time": "07:08.303",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 6
       },
       {
         "name": "Max Mcfarlane",
-        "timeSec": 457.69,
-        "time": "07:37.690",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 7
       },
       {
         "name": "Coby Webb",
-        "timeSec": 808.89,
-        "time": "13:28.890",
+        "timeSec": null,
+        "time": "",
         "category": "Groms",
         "seed": 8
       }
@@ -63,204 +63,204 @@
     "Open": [
       {
         "name": "Jay Kenward",
-        "timeSec": 305.137,
-        "time": "05:05.137",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 1
       },
       {
         "name": "Daniel Turner",
-        "timeSec": 317.357,
-        "time": "05:17.357",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 2
       },
       {
         "name": "Alexis Matton",
-        "timeSec": 323.403,
-        "time": "05:23.403",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 3
       },
       {
         "name": "Joel Jones",
-        "timeSec": 354.267,
-        "time": "05:54.267",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 4
       },
       {
         "name": "Jonas Pfl\u00fcger",
-        "timeSec": 362.663,
-        "time": "06:02.663",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 5
       },
       {
         "name": "Nico Stuart",
-        "timeSec": 368.03,
-        "time": "06:08.030",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 6
       },
       {
         "name": "Sam O\u2019Connell",
-        "timeSec": 370.443,
-        "time": "06:10.443",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 7
       },
       {
         "name": "Jacob Jones",
-        "timeSec": 373.5,
-        "time": "06:13.500",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 8
       },
       {
         "name": "Geky Del Curto",
-        "timeSec": 378.273,
-        "time": "06:18.273",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 9
       },
       {
         "name": "Benoit Rousseaux",
-        "timeSec": 378.66,
-        "time": "06:18.660",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 10
       },
       {
         "name": "Jeffrey Jaffa Gaming",
-        "timeSec": 387.307,
-        "time": "06:27.307",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 11
       },
       {
         "name": "Florent Audit",
-        "timeSec": 387.327,
-        "time": "06:27.327",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 12
       },
       {
         "name": "Thorkild Rasmussen",
-        "timeSec": 409.13,
-        "time": "06:49.130",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 13
       },
       {
         "name": "Clint Lashley",
-        "timeSec": 416.28,
-        "time": "06:56.280",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 14
       },
       {
         "name": "Gerard Rincon",
-        "timeSec": 416.523,
-        "time": "06:56.523",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 15
       },
       {
         "name": "Adrian Kruger",
-        "timeSec": 420.17,
-        "time": "07:00.170",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 16
       },
       {
         "name": "Vid Gladovic",
-        "timeSec": 421.36,
-        "time": "07:01.360",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 17
       },
       {
         "name": "Radim Kla\u0161ka",
-        "timeSec": 426.26,
-        "time": "07:06.260",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 18
       },
       {
         "name": "Joselito Dendoncker",
-        "timeSec": 431.177,
-        "time": "07:11.177",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 19
       },
       {
         "name": "James Grant",
-        "timeSec": 432.183,
-        "time": "07:12.183",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 20
       },
       {
         "name": "Wickor Sowinski",
-        "timeSec": 438.223,
-        "time": "07:18.223",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 21
       },
       {
         "name": "James Pitcher",
-        "timeSec": 438.907,
-        "time": "07:18.907",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 22
       },
       {
         "name": "Eduardo Queralto",
-        "timeSec": 454.82,
-        "time": "07:34.820",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 23
       },
       {
         "name": "Tobi S\u00fcnder",
-        "timeSec": 458.883,
-        "time": "07:38.883",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 24
       },
       {
         "name": "F\u00e1bio Costa",
-        "timeSec": 465.987,
-        "time": "07:45.987",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 25
       },
       {
         "name": "Tom\u00e1\u0161 Mach",
-        "timeSec": 470.37,
-        "time": "07:50.370",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 26
       },
       {
         "name": "Jonas Bukrinski Andersen",
-        "timeSec": 471.917,
-        "time": "07:51.917",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 27
       },
       {
         "name": "Lars Lot trip",
-        "timeSec": 519.437,
-        "time": "08:39.437",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 28
       },
       {
         "name": "Nick Oppy",
-        "timeSec": 530.373,
-        "time": "08:50.373",
+        "timeSec": null,
+        "time": "",
         "category": "Open",
         "seed": 29
       }
@@ -268,22 +268,22 @@
     "Wildcard": [
       {
         "name": "Fabian Scherrer",
-        "timeSec": 443.0,
-        "time": "07:23.000",
+        "timeSec": null,
+        "time": "",
         "category": "Wildcard",
         "seed": 1
       },
       {
         "name": "Radom Kla\u0161ka",
-        "timeSec": 443.33,
-        "time": "07:23.330",
+        "timeSec": null,
+        "time": "",
         "category": "Wildcard",
         "seed": 2
       },
       {
         "name": "Eduardo Stralis Pavese",
-        "timeSec": 443.79,
-        "time": "07:23.790",
+        "timeSec": null,
+        "time": "",
         "category": "Wildcard",
         "seed": 3
       }
@@ -291,57 +291,57 @@
     "Women": [
       {
         "name": "Jessica Jones",
-        "timeSec": 409.27,
-        "time": "06:49.270",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 1
       },
       {
         "name": "Barbara Tokarska",
-        "timeSec": 450.747,
-        "time": "07:30.747",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 2
       },
       {
         "name": "Leyla Zi",
-        "timeSec": 457.33,
-        "time": "07:37.330",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 3
       },
       {
         "name": "Chantelle Warner-wells",
-        "timeSec": 467.63,
-        "time": "07:47.630",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 4
       },
       {
         "name": "Kate Paxton",
-        "timeSec": 471.25,
-        "time": "07:51.250",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 5
       },
       {
         "name": "Qurine Posno",
-        "timeSec": 474.043,
-        "time": "07:54.043",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 6
       },
       {
         "name": "Mollie Stuart",
-        "timeSec": 514.553,
-        "time": "08:34.553",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 7
       },
       {
         "name": "Chloe Jager",
-        "timeSec": 531.127,
-        "time": "08:51.127",
+        "timeSec": null,
+        "time": "",
         "category": "Women",
         "seed": 8
       }
@@ -349,15 +349,15 @@
     "Legends": [
       {
         "name": "Lars Lottrup",
-        "timeSec": 468.7,
-        "time": "07:48.700",
+        "timeSec": null,
+        "time": "",
         "category": "Legends",
         "seed": 1
       },
       {
         "name": "Si Oppenheimer",
-        "timeSec": 491.04,
-        "time": "08:11.040",
+        "timeSec": null,
+        "time": "",
         "category": "Legends",
         "seed": 2
       }

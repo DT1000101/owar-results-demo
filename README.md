@@ -8,6 +8,7 @@ This fork is for **static Vercel previews** using RaceTec RDF snapshots (not liv
 
 | Branch | Data | Purpose |
 |--------|------|---------|
+| `demo/empty-data` | Pre-start (names only, no times) | Validate seeding board before racing |
 | `demo/partial-data` | Incomplete OWAR2025 export | Validate “up next” / NA finish rows |
 | `demo/full-data` | Complete OWAR2025 export | Validate full weekend boards |
 
