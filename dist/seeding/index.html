@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="OWAR seeding board — starting grids from qualifying seeds.">
+  <title>OWAR Seeding</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/seeding/seeding.css">
+</head>
+<body data-page="seeding">
+<header class="brandbar">
+  <div class="brandbar__inner">
+    <a class="brand" href="https://2026.owalgarve.com/race" target="_blank" rel="noopener">
+      <img class="brand-logo brand-logo--owa" src="/assets/owa.png" alt="OW Algarve"><span>OW Algarve</span>
+    </a>
+    <div class="event-title">
+      <img class="event-logo" src="/assets/eol.png" alt="European Onewheel League">
+      <div><strong>OWAR 2026</strong><span>Seeding board</span></div>
+    </div>
+    <a class="brand" href="https://flowstatepev.com" target="_blank" rel="noopener">
+      <span>Flow State PEV</span>
+      <img class="brand-logo brand-logo--flow" src="/assets/flowstatepev.png" alt="Flow State PEV">
+    </a>
+  </div>
+</header>
+
+<main class="shell seeding-shell">
+  <section class="statusline">
+    <div>
+      <div class="eyebrow">European Onewheel League Finals</div>
+      <h1 id="seeding-title">Open seeding</h1>
+      <p class="seeding-lead" id="seeding-lead">Fastest single lap sets seed. Heat grids and staggered starts come from those seeds.</p>
+      <div class="seeding-cats" id="seeding-cats" role="tablist" aria-label="Category"></div>
+      <div class="seed-format" id="seed-format" aria-live="polite"></div>
+      <p class="seeding-lead" style="margin:14px 0 0"><a class="btn seeding-board-btn" href="/">Results board</a></p>
+    </div>
+  </section>
+
+  <div class="seeding-layout">
+    <section class="seeding-seeds panel">
+      <header class="seeding-panel-head">
+        <h2>Seed list</h2>
+        <p id="seed-list-note">From the seeding race (category-local). Better seed = lower number.</p>
+      </header>
+      <div class="table-scroll">
+        <table class="seed-table" id="seed-table">
+          <thead><tr><th>Seed</th><th id="seed-session-head" hidden>Session</th><th>Best lap</th><th>Rider</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="seeding-heats">
+      <header class="seeding-panel-head">
+        <h2 id="heats-title">Eighth-finals · 8 heats</h2>
+        <p id="heats-note">Staggered gates 1–4. After eighth-finals: both 1sts start ahead of both 2nds; within each pair, better seed starts ahead.</p>
+      </header>
+      <div class="heat-grid" id="heat-grid"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <span><a href="/">← Live results</a></span>
+  <span>Organised by <a href="https://2026.owalgarve.com/race">OW Algarve</a></span>
+</footer>
+<script src="/bracket.js"></script>
+<script src="/seeding/seeding.js"></script>
+</body>
+</html>

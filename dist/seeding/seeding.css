@@ -1,0 +1,48 @@
+.seeding-shell{padding-bottom:48px}
+.seeding-cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.seeding-cats .tab{padding:10px 14px;font-size:.9rem}
+.seeding-cats .tab small{margin-left:4px;opacity:.75;font-weight:700}
+.seed-format{margin-top:14px;max-width:52rem}
+.seed-format-steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.seed-format-steps li{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:baseline;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.seed-format-steps strong{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#9d151b}
+.seed-format-steps span{color:var(--muted);font-size:.88rem;line-height:1.4}
+.heat-grid--few{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}
+.seeding-lead{margin:8px 0 0;max-width:46rem;color:var(--muted);font-size:.95rem;line-height:1.45}
+.seeding-lead a{color:#9d151b;font-weight:700}
+.seeding-layout{display:grid;grid-template-columns:minmax(340px,1.05fr) minmax(0,1.35fr);gap:22px;align-items:start}
+.seeding-panel-head{margin-bottom:12px}
+.seeding-panel-head h2{margin:0;font-size:1.15rem}
+.seeding-panel-head p{margin:6px 0 0;color:var(--muted);font-size:.82rem;line-height:1.4}
+.seeding-seeds{padding:16px;border-radius:16px;min-width:0}
+.seed-table{width:100%;border-collapse:collapse;font-size:.92rem;table-layout:fixed}
+.seed-table th{text-align:left;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#777;padding:8px 8px;border-bottom:1px solid var(--line)}
+.seed-table td{padding:9px 8px;border-bottom:1px solid #eee;vertical-align:middle}
+.seed-table .seed{font-weight:850;width:3.6rem}
+.seed-table .session{font-weight:800;font-size:.78rem;color:#9d151b;width:3.6rem}
+.seed-table .time{font-variant-numeric:tabular-nums;color:#444;white-space:nowrap;width:7.2rem;font-weight:700}
+.seed-table .rider{font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.heat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.heat-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(20,20,18,.06)}
+.heat-card>header{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:12px 14px;background:#1b1b1b;color:#fff;border-bottom:3px solid var(--yellow)}
+.heat-card>header strong{font-size:.95rem}
+.heat-card>header span{color:#bbb;font-size:.72rem;font-weight:700}
+.start-grid{list-style:none;margin:0;padding:8px 10px 12px;display:grid;gap:6px}
+.start-grid li{display:grid;grid-template-columns:28px 42px minmax(0,1fr) auto;gap:8px;align-items:center;padding:8px 8px;border:1px solid var(--line);border-radius:10px;background:#fafaf7}
+.start-grid li.missing{opacity:.55}
+.start-grid .gate{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:#242629;color:#fff;font-weight:850;font-size:.85rem}
+.start-grid .seed-pill{font-size:.72rem;font-weight:850;color:#8a6d00}
+.start-grid .who{font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.start-grid .tt{font-variant-numeric:tabular-nums;color:#666;font-size:.78rem}
+@media(max-width:900px){
+  .seeding-layout{grid-template-columns:1fr}
+  .heat-grid{grid-template-columns:1fr}
+}
+@media(min-width:1100px){
+  .heat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* Live results: start + seed cols */
+.race-table col.result-start,.race-table col.result-seed{width:4.2rem}
+.race-table .start,.race-table .seed{font-weight:850;font-variant-numeric:tabular-nums}
+.race-table .seed{color:#8a6d00}
