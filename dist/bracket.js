@@ -114,16 +114,26 @@
   }
 
   function roleLabel(stage, num, role) {
-    const place = ["Winner", "2nd", "3rd", "4th"][ROLE[role]];
+    const place = ["1st place", "2nd place", "3rd place", "4th place"][ROLE[role]];
     const round =
       stage === "heat"
-        ? `Heat ${num}`
+        ? `H${num}`
         : stage === "quarter"
-          ? `Quarter ${num}`
+          ? `QF${num}`
           : stage === "semi"
-            ? `Semi ${num}`
+            ? `SF${num}`
             : "Final";
-    return `${place} · ${round}`;
+    return `${place} ${round}`;
+  }
+
+  function riderHasTime(rider) {
+    if (!rider) return false;
+    if (rider.timeSec != null && Number.isFinite(Number(rider.timeSec))) return true;
+    return Boolean(String(rider.time || "").trim());
+  }
+
+  function categoryHasTimes(category) {
+    return (seedCatalog?.categories?.[category] || []).some(riderHasTime);
   }
 
   function slotsFromHeats(heatA, heatB) {
@@ -209,7 +219,7 @@
     return sortFinishers(rows).filter(hasRecordedResult);
   }
 
-  /** First-round gate list from TT seed zigzag when nobody has raced yet. */
+  /** First-round gate list from TT seed zigzag (Seed N until TT times exist). */
   function seedStartRows(family, stage, num) {
     const cat = FAMILY_SEED_CAT[family];
     if (!cat || !seedCatalog) return null;
@@ -227,17 +237,32 @@
     if (prefix !== want) return null;
     const heat = board.heats[num - 1];
     if (!heat) return null;
-    return heat.slots
-      .filter((s) => s.known)
-      .map((s) => ({
-        position: null,
-        athlete_id: "",
-        name: s.name,
-        bib: "—",
-        time: "Not raced yet",
-        pending: true,
-        known: true,
-      }));
+    return heat.slots.map((s) => ({
+      position: null,
+      athlete_id: "",
+      name: s.known ? s.name : `Seed ${s.seed}`,
+      bib: "—",
+      time: "Not raced yet",
+      pending: true,
+      known: s.known,
+      seed: s.seed,
+    }));
+  }
+
+  function syntheticEvent(family, key, stage, num, items) {
+    return {
+      id: `projected:${key}`,
+      name: displayName(family, stage, num),
+      stage: displayName(family, stage, num),
+      tournament:
+        items.find((x) => familyFromName(x.e.tournament || x.e.name) === family)?.e?.tournament ||
+        items[0]?.e?.tournament ||
+        "",
+      level: items[0]?.e?.level || "",
+      highlight_count: 2,
+      multi_lap: 0,
+      count: 0,
+    };
   }
 
   function lookupSeed(name, family) {
@@ -337,15 +362,21 @@
   }
 
   function decorateRows(rows, family, stage, num, byKey, pending) {
-    const firstRound = stage === "heat";
+    const hasFeederRoles = rows.some((r) => r.fromRole);
+    const firstRound = !hasFeederRoles;
     let enriched;
     if (pending) {
-      enriched = rows.map((r) => ({
-        ...r,
-        finishPos: null,
-        fromRole: r.fromRole,
-        ...seedMeta(r.known ? r.name : "", family),
-      }));
+      enriched = rows.map((r) => {
+        const meta = r.known ? seedMeta(r.name, family) : {};
+        return {
+          ...r,
+          finishPos: null,
+          fromRole: r.fromRole,
+          seed: r.seed ?? meta.seed ?? null,
+          seedTimeSec: meta.seedTimeSec ?? null,
+          seedTime: meta.seedTime ?? null,
+        };
+      });
     } else {
       enriched = tagRolesFromFeeders(rows, family, stage, num, byKey);
     }
@@ -427,23 +458,11 @@
               time: "Not raced yet",
             }));
           if (!existing && !seeded) continue;
-          const empty = decorateRows(baseRows, family, node.stage, node.num, byKey, true);
           projected.push({
-            e:
-              existing?.e || {
-                id: `projected:${key}`,
-                name: displayName(family, node.stage, node.num),
-                stage: displayName(family, node.stage, node.num),
-                tournament: items.find((x) => familyFromName(x.e.tournament || x.e.name) === family)?.e
-                  ?.tournament || "",
-                level: items[0]?.e?.level || "",
-                highlight_count: 2,
-                multi_lap: 0,
-                count: 0,
-              },
+            e: existing?.e || syntheticEvent(family, key, node.stage, node.num, items),
             r: [],
             pending: true,
-            projectedRows: empty,
+            projectedRows: decorateRows(baseRows, family, node.stage, node.num, byKey, true),
             parsed: { ...node, family, key },
           });
           continue;
@@ -453,48 +472,15 @@
           const srcKey = `${family}:${slot.from.stage}:${slot.from.num}`;
           return recordedFinishers(byKey.get(srcKey)?.r).length > 0;
         });
+        // First knockout round for small fields (Women/Groms semis) uses seed slots;
+        // later rounds always project advancement placeholders from the feed rules.
         const seededFirst = !anySource ? seedStartRows(family, node.stage, node.num) : null;
-        if (!anySource && !existing && !seededFirst) continue;
-        if (seededFirst) {
-          const e =
-            existing?.e || {
-              id: `projected:${key}`,
-              name: displayName(family, node.stage, node.num),
-              stage: displayName(family, node.stage, node.num),
-              tournament: items.find((x) => familyFromName(x.e.tournament || x.e.name) === family)?.e
-                ?.tournament || "",
-              level: items[0]?.e?.level || "",
-              highlight_count: 2,
-              multi_lap: 0,
-              count: 0,
-            };
-          projected.push({
-            e,
-            r: [],
-            pending: true,
-            projectedRows: decorateRows(seededFirst, family, node.stage, node.num, byKey, true),
-            parsed: { ...node, family, key },
-          });
-          continue;
-        }
-
-        const e =
-          existing?.e || {
-            id: `projected:${key}`,
-            name: displayName(family, node.stage, node.num),
-            stage: displayName(family, node.stage, node.num),
-            tournament: items[0]?.e?.tournament || "",
-            level: items[0]?.e?.level || "",
-            highlight_count: 2,
-            multi_lap: 0,
-            count: 0,
-          };
-
+        const pendingRows = seededFirst || rowsRaw;
         projected.push({
-          e,
+          e: existing?.e || syntheticEvent(family, key, node.stage, node.num, items),
           r: [],
           pending: true,
-          projectedRows: decorateRows(rowsRaw, family, node.stage, node.num, byKey, true),
+          projectedRows: decorateRows(pendingRows, family, node.stage, node.num, byKey, true),
           parsed: { ...node, family, key },
         });
       }
@@ -601,12 +587,13 @@
         subtitle: seeds.join(" · "),
         slots: seeds.map((seed, gi) => {
           const rider = bySeed.get(seed);
+          const locked = riderHasTime(rider);
           return {
             startPos: gi + 1,
             seed,
-            name: rider?.name || `Seed ${seed}`,
-            time: rider?.time || "",
-            known: Boolean(rider),
+            name: locked ? rider.name : `Seed ${seed}`,
+            time: locked ? rider.time || "" : "",
+            known: locked,
           };
         }),
       })),
@@ -626,7 +613,12 @@
     loadSeedsData,
     buildOpenHeatGrids,
     buildCategoryHeatGrids,
+    categoryHasTimes,
+    riderHasTime,
     EOL_EIGHTH_FINALS_32,
+    QF_FROM_HEATS,
+    SF_FROM_QUARTERS,
+    FINAL_FROM_SEMIS,
     getSeedCatalog: () => seedCatalog,
   };
 })(window);
