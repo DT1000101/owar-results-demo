@@ -97,7 +97,7 @@
 
   function displayName(family, stage, num) {
     const prefix = {
-      "open-men": "Mens",
+      "open-men": "Open",
       women: "Womens",
       groms: "Groms",
       "wild-men": "Wild - Mens",

@@ -17,10 +17,16 @@ function scheduleStaleLabel(){
 }
 
 const tournamentRank=t=>{
-  const n=String(t).toLowerCase();
+  const n=String(t).toLowerCase().replace(/\s+/g,' ').trim();
   const order=['open','open men','women','groms','wild men','wild women','infinity race','surf & dirt','surf and durt','specials','legends','chair race','2 hour relay race'];
   const i=order.indexOf(n);
   return i<0?100:i;
+};
+/** Adam RaceTec sometimes labels Open as "Open Men" — show Open for 2026. */
+const displayTournament=t=>{
+  const n=String(t||'').trim();
+  if(/^open(\s+men)?$/i.test(n)) return 'Open';
+  return n||'Tournament';
 };
 const levelRank=level=>['Qualifiers','Heats','Quarters','Semi','Finals'].indexOf(level);
 
@@ -79,11 +85,12 @@ async function render(){
     }else if(lastSourceStamp===null){
       renderUpdateAge();scheduleStaleLabel();
     }
-    const ts=[...new Set(f.events.map(e=>e.tournament||'Tournament'))].sort((a,b)=>tournamentRank(a)-tournamentRank(b)||a.localeCompare(b));
+    const rawTs=[...new Set(f.events.map(e=>e.tournament||'Tournament'))];
+    const ts=[...new Set(rawTs.map(displayTournament))].sort((a,b)=>tournamentRank(a)-tournamentRank(b)||a.localeCompare(b));
     if(!selected||!ts.includes(selected))selected=ts[0];
     $('#event-tabs').innerHTML=ts.map(t=>`<button class="tab ${t===selected?'active':''}" data-t="${esc(t)}">${esc(t)}</button>`).join('');
     $('#event-tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=b.dataset.t;selectedLevel=null;render()});
-    const es=f.events.filter(e=>(e.tournament||'Tournament')===selected);
+    const es=f.events.filter(e=>displayTournament(e.tournament||'Tournament')===selected);
     if(!es.length){$('#race-title').textContent='No published results';$('#result-count').textContent='';$('#round-nav').innerHTML='';$('#stage-results').innerHTML='';return}
     const data=await Promise.all(es.map(e=>get('/api/public/events/'+encodeURIComponent(e.id)+'/results')));
     const raw=es.map((e,i)=>({e,r:data[i]}));

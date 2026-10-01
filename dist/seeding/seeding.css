@@ -2,6 +2,11 @@
 .seeding-cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .seeding-cats .tab{padding:10px 14px;font-size:.9rem}
 .seeding-cats .tab small{margin-left:4px;opacity:.75;font-weight:700}
+.seed-format{margin-top:14px;max-width:52rem}
+.seed-format-steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.seed-format-steps li{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:baseline;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.seed-format-steps strong{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#9d151b}
+.seed-format-steps span{color:var(--muted);font-size:.88rem;line-height:1.4}
 .heat-grid--few{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}
 .seeding-lead{margin:8px 0 0;max-width:46rem;color:var(--muted);font-size:.95rem;line-height:1.45}
 .seeding-lead a{color:#9d151b;font-weight:700}
@@ -13,8 +18,9 @@
 .seed-table{width:100%;border-collapse:collapse;font-size:.92rem;table-layout:fixed}
 .seed-table th{text-align:left;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#777;padding:8px 8px;border-bottom:1px solid var(--line)}
 .seed-table td{padding:9px 8px;border-bottom:1px solid #eee;vertical-align:middle}
-.seed-table .seed{font-weight:850;width:4.2rem}
-.seed-table .time{font-variant-numeric:tabular-nums;color:#444;white-space:nowrap;width:7.5rem;font-weight:700}
+.seed-table .seed{font-weight:850;width:3.6rem}
+.seed-table .session{font-weight:800;font-size:.78rem;color:#9d151b;width:3.6rem}
+.seed-table .time{font-variant-numeric:tabular-nums;color:#444;white-space:nowrap;width:7.2rem;font-weight:700}
 .seed-table .rider{font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .heat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .heat-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(20,20,18,.06)}

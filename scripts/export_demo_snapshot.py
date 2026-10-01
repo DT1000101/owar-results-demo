@@ -52,7 +52,7 @@ def bucket(name: str) -> str:
     if "women" in n:
         return "Women"
     if n.startswith("men") or "men's" in n or "mens" in n:
-        return "Open Men"
+        return "Open"
     return "Specials"
 
 

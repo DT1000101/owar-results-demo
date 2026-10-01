@@ -32,8 +32,9 @@
     <div>
       <div class="eyebrow">European Onewheel League Finals</div>
       <h1 id="seeding-title">Open seeding</h1>
-      <p class="seeding-lead">Qualifying seed → starting grid. Same zigzag idea as the EOL seeding tool; live times stay on the results board.</p>
+      <p class="seeding-lead" id="seeding-lead">Fastest single lap sets seed. Heat grids and staggered starts come from those seeds.</p>
       <div class="seeding-cats" id="seeding-cats" role="tablist" aria-label="Category"></div>
+      <div class="seed-format" id="seed-format" aria-live="polite"></div>
       <p class="seeding-lead" style="margin:14px 0 0"><a class="btn seeding-board-btn" href="/">Results board</a></p>
     </div>
   </section>
@@ -42,11 +43,11 @@
     <section class="seeding-seeds panel">
       <header class="seeding-panel-head">
         <h2>Seed list</h2>
-        <p id="seed-list-note">From qualifying TT ranks (category-local). Better seed = lower number.</p>
+        <p id="seed-list-note">From the seeding race (category-local). Better seed = lower number.</p>
       </header>
       <div class="table-scroll">
         <table class="seed-table" id="seed-table">
-          <thead><tr><th>Seed</th><th>TT</th><th>Rider</th></tr></thead>
+          <thead><tr><th>Seed</th><th id="seed-session-head" hidden>Session</th><th>Best lap</th><th>Rider</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -55,7 +56,7 @@
     <section class="seeding-heats">
       <header class="seeding-panel-head">
         <h2 id="heats-title">Eighth-finals · 8 heats</h2>
-        <p>Gates 1–4. Later rounds: both winners take starts 1–2, both 2nds take 3–4, ordered by these seeds.</p>
+        <p id="heats-note">Staggered gates 1–4. After eighth-finals: both 1sts start ahead of both 2nds; within each pair, better seed starts ahead.</p>
       </header>
       <div class="heat-grid" id="heat-grid"></div>
     </section>
